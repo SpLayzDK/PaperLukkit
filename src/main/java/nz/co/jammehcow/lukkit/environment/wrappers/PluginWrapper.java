@@ -140,8 +140,12 @@ public class PluginWrapper extends LuaTable {
                     for (String pkg : events) {
                         try {
                             Class<?> c = Class.forName("org.bukkit.event." + pkg + "." + eventName);
+                            Class<?> paperclass = Class.forName("com.destroystokyo.paper.event." + pkg + "." + eventName);
                             if (Utilities.classIsEvent(c) && c != null) {
                                 return CoerceJavaToLua.coerce(plugin.registerEvent((Class<? extends Event>) c, callback));
+                            }
+                            if (Utilities.classisEvent(paperclass) && paperclass != null) {
+                                return CoerceJavaToLua.coerce(plugin.registerEvent((Class<? extends Event>) paperclass, callback));
                             }
                         } catch (ClassNotFoundException ignored) {
                             // This would spam the console anytime an event is registered if we print the stack trace
