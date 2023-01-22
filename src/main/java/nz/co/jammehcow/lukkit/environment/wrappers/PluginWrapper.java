@@ -144,7 +144,7 @@ public class PluginWrapper extends LuaTable {
                             if (Utilities.classIsEvent(c) && c != null) {
                                 return CoerceJavaToLua.coerce(plugin.registerEvent((Class<? extends Event>) c, callback));
                             }
-                            if (Utilities.classisEvent(paperclass) && paperclass != null) {
+                            if (Utilities.classIsEvent(paperclass) && paperclass != null) {
                                 return CoerceJavaToLua.coerce(plugin.registerEvent((Class<? extends Event>) paperclass, callback));
                             }
                         } catch (ClassNotFoundException ignored) {
