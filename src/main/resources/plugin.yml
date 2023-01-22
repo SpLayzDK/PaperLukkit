@@ -1,25 +1,25 @@
-name: Lukkit
+name: PaperLukkit
 main: nz.co.jammehcow.lukkit.Main
 version: 2.1.2
 
 author: ArtexDevelopment
-authors: [jammehcow, AL_1, mathhulk]
+authors: [jammehcow, AL_1, mathhulk, ImAlek]
 
 api-version: 1.13
 
 commands:
-  lukkit:
-    description: The main command for Lukkit
+  paperlukkit:
+    description: The main command for PaperLukkit
     usage: /<command> [help|last-error|plugins|reload|resetenv|run]
     permission: lukkit.command
     permission-message: You do not have permission to manage Lukkit.
 
 permissions:
   lukkit.command:
-    description: Give access to the /lukkit command.
+    description: Give access to the /PaperLukkit command.
     default: op
   lukkit.run:
-    description: Gives access to the /lukkit run command. Is not default for ops.
+    description: Gives access to the /PaperLukkit run command. Is not default for ops.
     default: false
     children:
       lukkit.command: true
