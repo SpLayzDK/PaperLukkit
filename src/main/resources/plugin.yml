@@ -8,18 +8,18 @@ authors: [jammehcow, AL_1, mathhulk, ImAlek]
 api-version: 1.13
 
 commands:
-  paperlukkit:
-    description: The main command for PaperLukkit
+  lukkit:
+    description: The main command for Lukkit
     usage: /<command> [help|last-error|plugins|reload|resetenv|run]
     permission: lukkit.command
     permission-message: You do not have permission to manage Lukkit.
 
 permissions:
   lukkit.command:
-    description: Give access to the /PaperLukkit command.
+    description: Give access to the /lukkit command.
     default: op
   lukkit.run:
-    description: Gives access to the /PaperLukkit run command. Is not default for ops.
+    description: Gives access to the /lukkit run command. Is not default for ops.
     default: false
     children:
       lukkit.command: true
