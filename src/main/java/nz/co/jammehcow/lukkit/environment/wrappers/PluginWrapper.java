@@ -140,13 +140,14 @@ public class PluginWrapper extends LuaTable {
                     for (String pkg : events) {
                         try {
                             Class<?> c = Class.forName("org.bukkit.event." + pkg + "." + eventName);
-                            Class<?> paperclass = Class.forName("com.destroystokyo.paper.event." + pkg + "." + eventName);
                             if (Utilities.classIsEvent(c) && c != null) {
                                 return CoerceJavaToLua.coerce(plugin.registerEvent((Class<? extends Event>) c, callback));
                             }
                             
                         } catch (ClassNotFoundException _) {
                             try {
+                                Class<?> paperclass = Class.forName("com.destroystokyo.paper.event." + pkg + "." + eventName);
+
                                 if (Utilities.classIsEvent(paperclass) && paperclass != null) {
                                     return CoerceJavaToLua.coerce(plugin.registerEvent((Class<? extends Event>) paperclass, callback));
                                 }
