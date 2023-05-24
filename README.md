@@ -1,5 +1,5 @@
 # PaperLukkit
-PaperLukkit is a fork of Lukkit, which is specifically made to work with paper events out-of-the-box. This includes amongst other the `PlayerJumpEvent`, `CreeperIgniteEvent`, `ThrownEggHatchEvent` and `TNTPrimeEvent`. They can be used with the `plugin.registerEvent` method, as any other Lukkit event.
+PaperLukkit is a fork of Lukkit, which is specifically made to work with paper events out-of-the-box. This includes `PlayerJumpEvent`, `CreeperIgniteEvent`, `ThrownEggHatchEvent` and `TNTPrimeEvent`. They can be used with the `plugin.registerEvent` method, as any other Lukkit event.
 
 # Lukkit
 Lukkit allows developers and server administrators to create plugins for the Spigot API with ease using the Lua scripting language. The language is simple and can be quickly picked up, even by beginners.
